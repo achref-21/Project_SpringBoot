@@ -1,9 +1,6 @@
 package esprit.achref.projet_sb.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Composant {
@@ -12,4 +9,10 @@ public class Composant {
     private long idComposant;
     private String nomComposant;
     private float prix;
+
+    @ManyToOne
+    private Menu Menu;
+
+    @OneToOne
+    private DetailComposant DetailComposant;
 }

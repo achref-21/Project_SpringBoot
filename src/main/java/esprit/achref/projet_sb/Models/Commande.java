@@ -15,6 +15,9 @@ public class Commande {
     private Float totalRemise;
     private Float totalCommande;
     private Long note;
-
+    @ManyToOne
+    Client Client;
+    @ManyToOne
+    Menu Menu;
 
 }

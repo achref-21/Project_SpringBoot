@@ -1,9 +1,8 @@
 package esprit.achref.projet_sb.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.Set;
 
 @Entity
 public class Menu {
@@ -13,4 +12,13 @@ public class Menu {
     private String libelleMenu;
     private TypeMenu typeMenu;
     private float prixTotal;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Menu")
+    private Set<Commande> Commandes;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    private Set<ChefCuisinier> ChefCuisiniers;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="Menu")
+    private Set<Composant> Composants;
 }

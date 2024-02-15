@@ -1,9 +1,8 @@
 package esprit.achref.projet_sb.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.Set;
 
 @Entity
 public class Restaurant {
@@ -12,4 +11,8 @@ public class Restaurant {
     private Long idRestaurant;
     private String nom;
     private Long nbPlacesMax;
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<Menu> Menus;
+    @ManyToOne
+    private ChaineRestauration ChaineRestauration;
 }

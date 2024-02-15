@@ -3,6 +3,7 @@ package esprit.achref.projet_sb.Models;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 public class Client {
@@ -13,4 +14,6 @@ public class Client {
     @Temporal(TemporalType.DATE)
     private LocalDate datePremiereVisite;
 
+    @OneToMany(cascade = CascadeType.ALL ,mappedBy="Client")
+    private Set<Commande> Commandes;
 }
