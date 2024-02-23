@@ -14,5 +14,5 @@ public class Restaurant {
     @OneToMany(cascade = CascadeType.ALL)
     private Set<Menu> Menus;
     @ManyToOne
-    private ChaineRestauration ChaineRestauration;
+    private ChaineRestauration chaineRestauration;
 }

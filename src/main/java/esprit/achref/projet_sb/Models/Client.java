@@ -14,6 +14,6 @@ public class Client {
     @Temporal(TemporalType.DATE)
     private LocalDate datePremiereVisite;
 
-    @OneToMany(cascade = CascadeType.ALL ,mappedBy="Client")
+    @OneToMany(cascade = CascadeType.ALL ,mappedBy="client")
     private Set<Commande> Commandes;
 }

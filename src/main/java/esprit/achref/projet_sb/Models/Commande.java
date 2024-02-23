@@ -16,7 +16,7 @@ public class Commande {
     private Float totalCommande;
     private Long note;
     @ManyToOne
-    Client Client;
+    Client client;
     @ManyToOne
     Menu Menu;
 

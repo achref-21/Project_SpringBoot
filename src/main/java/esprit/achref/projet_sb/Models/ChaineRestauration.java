@@ -15,7 +15,7 @@ public class ChaineRestauration {
     private String libelle;
     @Temporal(TemporalType.DATE)
     private LocalDate dateCreation;
-    @OneToMany(cascade=CascadeType.ALL, mappedBy = "ChaineRestauration")
+    @OneToMany(cascade=CascadeType.ALL, mappedBy = "chaineRestauration")
     private Set<Restaurant> Restaurants;
 
 
