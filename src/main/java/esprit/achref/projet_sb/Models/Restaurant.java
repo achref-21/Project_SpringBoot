@@ -1,10 +1,14 @@
 package esprit.achref.projet_sb.Models;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Set;
 
 @Entity
+@Getter
+@Setter
 public class Restaurant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

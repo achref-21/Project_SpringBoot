@@ -1,8 +1,12 @@
 package esprit.achref.projet_sb.Models;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class Composant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
